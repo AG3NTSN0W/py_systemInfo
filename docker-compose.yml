@@ -1,0 +1,10 @@
+version: "3"
+services:
+  systemInfo:
+    build: .
+    image: snow/system-info
+    container_name: systemInfo
+    environment:
+      - botToken=${BOT_TOKEN}
+      - chatId=${CHAT_ID}    
+    restart: unless-stopped  
